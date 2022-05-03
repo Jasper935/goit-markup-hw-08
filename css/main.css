@@ -770,12 +770,18 @@ address {
   color: var(--accent-color);
 }
 
+.connections.list {
+  width: 230px;
+}
+
 .subscr-form {
   display: flex;
+  margin-right: auto;
 }
 
 .subscribe {
   margin-left: 93px;
+  margin-right: auto;
 }
 
 .subscribe .btn {
