@@ -1,0 +1,53 @@
+// Vars Reset
+@import "./utils/_vars.scss";
+@import "./base/reset";
+@import "./utils/hidden";
+
+// Global
+@import "./base/global";
+
+//Container
+@import "./base/container";
+
+//Logo
+@import "./components/logo";
+
+// Header components
+@import "./components/header/page-header";
+@import "./components/header/site-nav";
+@import "./components/header/contacts";
+
+
+//Hero
+@import "./components/hero";
+
+//Modal
+@import "./components/modal/modal";
+@import "./components/modal/backdrop";
+@import "./components/modal/modal-form";
+
+//Socials
+@import "./components/socials";
+
+//Sections
+@import "./components/sections";
+@import "./components/feutures";
+@import "./components/works";
+@import "./components/team";
+@import "./components/clients";
+
+
+
+//Footer
+@import "./components/footer/page-footer";
+@import "./components/footer/adress";
+@import "./components/footer/form";
+@import "./components/footer/socials";
+
+//Portfolio
+@import "./components/portolio";
+//Filter
+@import "./components/filter";
+//Grid
+@import "./components/grid";
+

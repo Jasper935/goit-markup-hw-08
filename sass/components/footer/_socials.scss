@@ -1,0 +1,35 @@
+.join-us {
+    margin-left: 70px;
+  }
+  .join-us .title,
+  .subscribe .title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  
+    color: #ffffff;
+  }
+  
+  .footer-socials .social-icon {
+    fill: #fff;
+  }
+  .footer-socials {
+    display: flex;
+  }
+  .join-us .social-link {
+    background-color: rgba(255, 255, 255, 0.1);
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus
+      {
+        background-color: var(--link-color);
+      }
+    }
+  
+ 

@@ -1,0 +1,24 @@
+address {
+    margin-top: 20px;
+  }
+ 
+  .connections .connections-item + .connections-item {
+    margin-top: 9px;
+  }
+  
+ 
+  .connections__link.location {
+    color: #ffffff;
+  }
+  .connections__link {
+    color: rgba(255, 255, 255, 0.6);
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+    color: var(--accent-color);
+  }
+  }
+ 

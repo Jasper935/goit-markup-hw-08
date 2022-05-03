@@ -1,0 +1,19 @@
+.page-header {
+  
+  & .contacts {
+    display: flex;
+    margin-left: auto;
+  }
+  &__container {
+    display: flex;
+  
+    align-items: center;
+  }
+}
+
+.header-nav {
+  margin-left: 93px;
+}
+.bottom-line {
+  border-bottom: 1px solid #ececec;
+}
