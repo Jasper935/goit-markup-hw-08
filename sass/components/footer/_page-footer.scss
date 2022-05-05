@@ -16,7 +16,22 @@
   align-items: center;
   text-align: center;
 }
+.page-footer .logo{
+  @include mq(tablet) {
+    padding: 0;
+    margin-right:0;
+  }
+}
 
 .page-footer .studio {
   color: #ffffff;
+}
+
+.footer-start{
+  @include mq(tablet){
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+     }
+  
 }

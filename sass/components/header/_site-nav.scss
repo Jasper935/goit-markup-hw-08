@@ -5,14 +5,12 @@
   }
   @include mq(tablet) {
     flex-direction: row;
-    
+
     margin-right: 80px;
-    
   }
   @include mq(desktop) {
-    
   }
-  
+ 
   &:hover {
     color: var(--accent-color);
   }
@@ -34,7 +32,6 @@
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    
 
     &:hover,
     &:focus {
@@ -57,5 +54,3 @@
     color: #2196f3;
   }
 }
-
-

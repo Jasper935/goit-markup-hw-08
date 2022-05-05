@@ -2,34 +2,25 @@
   display: flex;
   margin-right: auto;
   margin-left: auto;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    // align-items: center;
-    text-align: center;
-    justify-content: center;
-  @include mq(mobile){
-    
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  // align-items: center;
+  text-align: center;
+  justify-content: center;
+  @include mq(mobile) {
   }
 }
-
 
 .subscribe {
-
-  // margin-left: 93px;
-  // margin-right: auto;
   display: flex;
-    // width: 450px;
-    margin: 0;
-    flex-direction: column;
-    // align-items: center;
-    // text-align: center;
-    // justify-content: space-between;
-  @include mq(mobile){
-    
+
+  margin: 0;
+  flex-direction: column;
+
+  @include mq(mobile) {
   }
 }
-
 
 .subscr-form .text {
   margin: 0 10px 0 0;
@@ -42,11 +33,10 @@
   border: #2196f3;
 }
 .subscribe .form-input {
-  // min-width: 450px;
-  width: 100%;
+  
+  
   height: 50px;
-  // margin-right: auto;
-  // margin-left: auto;
+ 
   padding: 15px 16px;
   font-weight: 400;
   font-size: 16px;
@@ -68,15 +58,14 @@
   }
 
   display: flex;
-    
-    margin: 0 0 20px 0;
-    flex-direction: column;
-    align-items: center;
-  @include mq(mobile){
-    
-    
-  }
 
+  margin: 0 0 20px 0;
+  flex-direction: column;
+  align-items: center;
+  
+  @include mq(tablet){
+    min-width: 450px;
+     }
 }
 .subscribe .btn {
   color: #fff;
@@ -87,7 +76,7 @@
   height: 50px;
 
   margin-left: auto;
-    margin-right: auto;
+  margin-right: auto;
 
   border-radius: 4px;
   padding: 0;
@@ -111,9 +100,5 @@
     background-color: #188ce8;
   }
 
-  @include mq(mobile){
-    
-    
-    
-  }
+  
 }

@@ -131,6 +131,7 @@ body {
 }
 
 .page-header__container {
+  width: 100%;
   display: flex;
   margin: 0;
 }
@@ -230,6 +231,7 @@ body {
   height: 796px;
   padding: 48px 40px;
   background-color: white;
+  z-index: 1;
 }
 
 .menu-container.is-open .mob-menu {
@@ -246,7 +248,7 @@ body {
 }
 
 .mob-menu__item:not(:last-child) {
-  margin-top: 32px;
+  margin-bottom: 32px;
 }
 
 .mob-menu__link {
@@ -805,8 +807,39 @@ body {
 
 .feutures-list {
   display: flex;
-  flex-direction: row;
   flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .feutures-list {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+}
+
+.feutures-list__item {
+  margin-right: auto;
+  margin-left: auto;
+  align-items: center;
+}
+
+.feutures-list__item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .feutures-list__item {
+    max-width: 354px;
+    margin: 0;
+    margin-bottom: 30px;
+    margin-right: 30px;
+  }
+  .feutures-list__item:nth-child(2n) {
+    margin-right: 0;
+  }
+  .feutures-list__item:nth-last-child(-n + 2) {
+    margin-bottom: 0;
+  }
 }
 
 .feutures-list__title {
@@ -852,16 +885,6 @@ body {
   line-height: 1.7;
 }
 
-.feutures-list__item {
-  margin-right: auto;
-  margin-left: auto;
-  align-items: center;
-}
-
-.feutures-list__item:not(:last-child) {
-  margin-bottom: 30px;
-}
-
 .work {
   padding-bottom: 94px;
 }
@@ -878,6 +901,12 @@ body {
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .work {
+    display: none;
   }
 }
 
@@ -915,8 +944,12 @@ body {
 
 .team {
   background-color: #f5f4fa;
-  padding-bottom: 94px;
-  padding-top: 94px;
+  padding-bottom: 60px;
+  padding-top: 60px;
+}
+
+.team .section-title {
+  margin-bottom: 50px;
 }
 
 .team .list {
@@ -925,10 +958,6 @@ body {
   flex-wrap: wrap;
   margin-left: auto;
   margin-right: auto;
-}
-
-.team .section-title {
-  margin-bottom: 50px;
 }
 
 .team .list-item {
@@ -940,6 +969,20 @@ body {
 
 .team .list-item:not(:last-child) {
   margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .team .list-item {
+    max-width: 354px;
+    margin-bottom: 30px;
+    margin-right: 30px;
+  }
+  .team .list-item:nth-child(2n) {
+    margin-right: 0;
+  }
+  .team .list-item:nth-last-child(-n + 2) {
+    margin-bottom: 0;
+  }
 }
 
 .team .title {
@@ -985,7 +1028,6 @@ body {
 .clients {
   padding-bottom: 60px;
   padding-top: 60px;
-  text-align: center;
 }
 
 .clients .list {
@@ -1000,7 +1042,6 @@ body {
 .clients .client-item {
   margin-bottom: 30px;
   margin-right: 30px;
-  margin-bottom: 30px;
 }
 
 .clients .client-item:nth-child(2n) {
@@ -1011,9 +1052,29 @@ body {
   margin-bottom: 0;
 }
 
+@media screen and (min-width: 768px) {
+  .clients .client-item {
+    min-width: 226px;
+    margin-bottom: 30px;
+    margin-right: 30px;
+  }
+  .clients .client-item:nth-child(3n) {
+    margin-right: 0;
+  }
+  .clients .client-item:nth-child(2n) {
+    margin-right: 30px;
+  }
+  .clients .client-item:nth-last-child(-n + 3) {
+    margin-bottom: 0;
+  }
+  .clients .client-item:last-child {
+    margin-right: 0;
+  }
+}
+
 .clients .client-link {
   display: flex;
-  width: 210px;
+  min-width: 210px;
   height: 92px;
   align-items: center;
   justify-content: center;
@@ -1032,6 +1093,12 @@ body {
 .clients .client-link:hover:focus .client-icon, .clients .client-link:focus:hover .client-icon,
 .clients .client-link:focus:focus .client-icon {
   fill: var(--link-color);
+}
+
+@media screen and (min-width: 768px) {
+  .clients .client-link {
+    max-width: 226px;
+  }
 }
 
 .clients .client-icon {
@@ -1059,8 +1126,29 @@ body {
   text-align: center;
 }
 
+@media screen and (min-width: 768px) {
+  .page-footer .logo {
+    padding: 0;
+    margin-right: 0;
+  }
+}
+
 .page-footer .studio {
   color: #ffffff;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-start {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .left-side {
+    margin-right: 165px;
+  }
 }
 
 address {
@@ -1118,7 +1206,6 @@ address {
 }
 
 .subscribe .form-input {
-  width: 100%;
   height: 50px;
   padding: 15px 16px;
   font-weight: 400;
@@ -1142,6 +1229,12 @@ address {
 .subscribe .form-input:focus-visible {
   outline: transparent;
   border: 1px solid var(--link-color);
+}
+
+@media screen and (min-width: 768px) {
+  .subscribe .form-input {
+    min-width: 450px;
+  }
 }
 
 .subscribe .btn {
@@ -1211,7 +1304,7 @@ address {
 }
 
 .portfolio {
-  padding: 94px 0;
+  padding: 60px 0;
 }
 
 .filter {

@@ -1,4 +1,11 @@
+.left-side{
+  @include mq(tablet){
+ margin-right: 165px;
+//  justify-content: center;
+  }
+}
 address {
+
     margin-top: 20px;
     // margin-bottom: 60px;
     @include mq(mobile){
