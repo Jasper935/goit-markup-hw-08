@@ -3,11 +3,16 @@
 @import "./base/reset";
 @import "./utils/hidden";
 
+//Mixines
+@import "./components/mixines";
+
 // Global
 @import "./base/global";
 
 //Container
 @import "./base/container";
+
+
 
 //Logo
 @import "./components/logo";
@@ -46,8 +51,10 @@
 
 //Portfolio
 @import "./components/portolio";
+
 //Filter
 @import "./components/filter";
+
 //Grid
 @import "./components/grid";
 

@@ -1,15 +1,37 @@
-.contacts {
-  .contacts__link {
+.page-header .contacts {
+  display: none;
+
+  
+
+    
+    @include mq(tablet){
+      margin-left: auto;
+      display: flex;
+      flex-direction: column;
+      padding: 21px 0;
+    }
+  
+  }
+  .page-header .contacts__icon{
+    padding: 2px;
+    margin-right: 8px;
+  }
+  .page-header .contacts__link {
     display: flex;
     align-items: center;
     color: var(--secondary-text-color);
     font-weight: 500;
-    letter-spacing: 0.02em;
-    font-size: 14px;
-    line-height: 1.2;
+font-size: 12px;
+line-height: 14px;
+/* identical to box height */
+
+letter-spacing: 0.02em;
+
+color: #757575;
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
     &:hover,
     &:focus {
       color: var(--link-color);
@@ -18,7 +40,6 @@
     &:hover .contacts__icon {
       fill: var(--accent-color);
     }
-  }
 
   &__item + &__item {
     margin-left: 50px;
@@ -35,4 +56,12 @@
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
+}
+.contacts__icon {
+  fill: #afb1b8;
+
+  margin-right: 10px;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }

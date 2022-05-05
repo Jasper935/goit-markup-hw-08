@@ -2,45 +2,82 @@
   background-color: var(--secondary-bg-color);
   font-weight: 900px;
   font-size: 44px;
-  width: 1600px;
-  height: 600px;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  // min-width: 480px;
+  height: 400px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 
   background-image: linear-gradient(
       to right,
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(../images/hero_bg.jpg);
+    url(../images/hero/mobile/Heroimg.jpg);
+    
+    @include mq(tablet) {
+      
+      background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/hero/tablet/1x/Header_img.jpg);
+      
+    }
+    @include mq(desktop) {
+      background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../../images/hero/desktop/hero1x.jpg);
+    }
 
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  
+
 }
+
 .hero-title {
   color: var(--hero-text-color);
-  width: 696px;
+  font-style: normal;
+font-weight: 900;
+font-size: 26px;
+line-height: 1.62;
+/* or 162% */
+
+text-align: center;
+letter-spacing: 0.06em;
+text-transform: uppercase;
+  // width: 696px;
   margin-top: 0;
   margin-bottom: 30px;
   margin-right: auto;
   margin-left: auto;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.4;
-  letter-spacing: 0.06em;
+  // font-size: 44px;
+  // line-height: 1.4;
+  // letter-spacing: 0.06em;
   text-align: center;
+  
   text-transform: uppercase;
+
+  @include mq(tablet) {
+    width: 360px;
+  }
 }
 
 /*Button*/
 .hero .btn {
   color: var(--button-color);
   background-color: var(--button-bg-color);
-
+  margin-bottom: 118px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.9;

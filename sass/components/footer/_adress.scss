@@ -1,5 +1,10 @@
 address {
     margin-top: 20px;
+    // margin-bottom: 60px;
+    @include mq(mobile){
+      
+      
+     }
   }
  
   .connections .connections-item + .connections-item {
@@ -22,6 +27,7 @@ address {
   }
   }
   .connections.list{
-    width: 230px;
+    // width: 230px;
+    margin-bottom: 60px;
   }
  

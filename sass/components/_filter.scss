@@ -1,6 +1,12 @@
 .filter {
     display: flex;
     justify-content: center;
+    @include mq(mobile-only) {
+      flex-wrap: wrap;
+    }
+    @include mq(tablet-only) {
+      flex-wrap: wrap;
+    }
   }
   
   .filter .item + .item {

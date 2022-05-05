@@ -1,7 +1,9 @@
+
 .modal .form-label {
   position: relative;
   display: flex;
   flex-direction: column;
+ 
 }
 .modal .form-tag {
   top: 0;
@@ -20,13 +22,13 @@
 }
 
 .modal .form-input {
-  padding: 11px 11px 11px 42px;
+  width: 370px;
   font-size: 12px;
-
+  padding-left: 35px;
   line-height: 1.16;
   top: 0;
   left: 0;
-  width: 448px;
+  
   height: 40px;
   letter-spacing: 0.01em;
 
@@ -82,21 +84,25 @@
 }
 
 .modal .checkbox-label {
+  margin-left: auto;
   height: 24px;
-  width: 423px;
+  width: 370px;
   display: flex;
-  width: 450px;
-  align-items: center;
-  justify-content: center;
+  // width: 450px;
+  align-items: stretch;
+  // justify-content: center;
+  align-content: center;
   color: #000;
   cursor: default;
   margin-bottom: 30px;
 }
 .modal .chekbox-tag {
+  padding: 2px 0;
   margin-left: 7px;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+//  align-items: center;
+  font-size: 12px;
+  line-height: 1.16;
 
   letter-spacing: 0.03em;
 

@@ -16,7 +16,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    
+
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
@@ -27,6 +27,74 @@
         >
 
         <nav class="header-nav">
+          <button
+            class="menu-button"
+            aria-expanded="false"
+            aria-controls="menu-container"
+            data-menu-button
+          >
+            <svg
+              class="header-icons"
+              
+              width="40px"
+              height="40px"
+              aria-label="переключатель мобильного меню"
+            >
+              <use
+                class="icon-menu"
+                href="./images/icons/icons.svg#icon-menu"
+              ></use>
+              <use
+                class="icon-close"
+                href="./images/icons/icons.svg#icon-menu_close"
+              ></use>
+            </svg>
+          </button>
+          <div class="menu-container" data-menu>
+           <div class="mob-menu">
+              <ul class="mob-list list">
+                <li class="mob-menu__item">
+                  <a class="mob-menu__link tel-menu__link--current" href="">Студия</a>
+                </li>
+                <li class="mob-menu__item">
+                  <a class="mob-menu__link" href="">Портфолио</a>
+                </li>
+                <li class="mob-menu__item">
+                  <a class="mob-menu__link" href="">Контакты</a>
+                </li>
+              </ul>
+             <div class="bottom-side">
+                <ul class="mob-contacts list">
+                  <li class="mob-contacts__item">
+                    <a class="mob-contacts__link mob-mail" href="mailto:info@devstudio.com">
+                      
+            
+                    info@devstudio.com</a
+                  >
+                </li>
+                <li class="mob-contacts__item ">
+                  <a class="mob-contacts__link link mob-tel" href="tel:+380961111111">
+                    +38 096 111 11 11
+                  </a>
+                </li>
+              </ul>
+              <ul class="mob-links list">
+                <li class="mob-links__item"><a class="mob-links__link" href="">Instagram</a></li>
+              
+              
+                <li class="mob-links__item"><a class="mob-links__link" href="">Twitter</a></li>
+              
+              
+                <li class="mob-links__item"><a class="mob-links__link" href="">Facebook</a></li>
+              
+              
+                <li class="mob-links__item"><a class="mob-links__link" href="">LinkedIn</a></li>
+              </ul>
+             </div>
+          </div>
+          </div>
+
+
           <ul class="site-nav list">
             <li class="site-nav__item">
               <a
@@ -256,12 +324,45 @@
           <h2 class="section-title">Наша команда</h2>
           <ul class="list">
             <li class="list-item">
-              <img
-                class="picture"
-                src="./images/studio-team/our_team1.jpg"
-                alt="Игорь Демьяненко"
-                width="270"
-              />
+              <picture class="team-picture">
+                <!-- Desktop pictures -->
+                <source
+                  srcset="
+                    ./images/studio-team/desktop/1x/t1d.jpg   1x,
+                    ./images/studio-team/desktop/t1d@2x-3.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpg"
+                />
+                <!-- Tablet pictures -->
+                <source
+                  srcset="
+                    ./images/studio-team/tablet/1x/t1tab.jpg 1x,
+                    ./images/studio-team/tablet/t1tab@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpg"
+                />
+                <!-- Mobile pictures -->
+                <source
+                  srcset="
+                    ./images/studio-team/mobile/1x/t1mob.jpg 1x,
+                    ./images/studio-team/mobile/t1mob@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpg"
+                />
+
+                <!-- Default picture -->
+                <img
+                  class="picture"
+                  src="./images/studio-team/mobile/1x/t1mob.jpg"
+                  alt="Игорь Демьяненко"
+                  width="450"
+                  height="460"
+                  loading="lazy"
+                />
+              </picture>
 
               <div class="group">
                 <h3 class="title">Игорь Демьяненко</h3>
@@ -330,12 +431,45 @@
               </div>
             </li>
             <li class="list-item">
-              <img
-                class="picture"
-                src="./images/studio-team/our_team2.jpg"
-                alt="Ольга Репина"
-                width="270"
-              />
+              <picture>
+                <!-- Desktop pictures -->
+                <source
+                  srcset="
+                    ./images/studio-team/desktop/1x/t2d.jpg 1x,
+                    ./images/studio-team/desktop/t2d@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpg"
+                />
+                <!-- Tablet pictures -->
+                <source
+                  srcset="
+                    ./images/studio-team/tablet/1x/t2tab.jpg 1x,
+                    ./images/studio-team/tablet/t2tab@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpg"
+                />
+                <!-- Mobile pictures -->
+                <source
+                  srcset="
+                    ./images/studio-team/mobile/1x/t2mob.jpg 1x,
+                    ./images/studio-team/mobile/t2mob@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpg"
+                />
+
+                <!-- Default picture -->
+                <img
+                  class="picture"
+                  src="./images/studio-team/mobile/1x/t2mob.jpg"
+                  alt="Ольга Репина"
+                  width="450"
+                  height="460"
+                  loading="lazy"
+                />
+              </picture>
               <div class="group">
                 <h3 class="title">Ольга Репина</h3>
                 <p class="text">Frontend Developer</p>
@@ -403,12 +537,45 @@
               </div>
             </li>
             <li class="list-item">
-              <img
-                class="picture"
-                src="./images/studio-team/our_team3.jpg"
-                alt="Николай Тарасов"
-                width="270"
-              />
+              <picture>
+                <!-- Desktop pictures -->
+                <source
+                  srcset="
+                    ./images/studio-team/desktop/1x/t3d.jpg 1x,
+                    ./images/studio-team/desktop/t3d@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpg"
+                />
+                <!-- Tablet pictures -->
+                <source
+                  srcset="
+                    ./images/studio-team/tablet/1x/t3tab.jpg 1x,
+                    ./images/studio-team/tablet/t3tab@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpg"
+                />
+                <!-- Mobile pictures -->
+                <source
+                  srcset="
+                    ./images/studio-team/mobile/1x/t3mob.jpg 1x,
+                    ./images/studio-team/mobile/t3mob@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpg"
+                />
+
+                <!-- Default picture -->
+                <img
+                  class="picture"
+                  src="./images/studio-team/mobile/1x/t3mob.jpg"
+                  alt="Николай Тарасов"
+                  width="450"
+                  height="460"
+                  loading="lazy"
+                />
+              </picture>
               <div class="group">
                 <h3 class="title">Николай Тарасов</h3>
                 <p class="text">Marketing</p>
@@ -476,12 +643,45 @@
               </div>
             </li>
             <li class="list-item">
-              <img
-                class="picture"
-                src="./images/studio-team/our_team4.jpg"
-                alt="Михаил Ермаков"
-                width="270"
-              />
+              <picture>
+                <!-- Desktop pictures -->
+                <source
+                  srcset="
+                    ./images/studio-team/desktop/1x/t4d.jpg 1x,
+                    ./images/studio-team/desktop/t4d@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpg"
+                />
+                <!-- Tablet pictures -->
+                <source
+                  srcset="
+                    ./images/studio-team/tablet/1x/t4tab.jpg 1x,
+                    ./images/studio-team/tablet/t4tab@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpg"
+                />
+                <!-- Mobile pictures -->
+                <source
+                  srcset="
+                    ./images/studio-team/mobile/1x/t4mob.jpg 1x,
+                    ./images/studio-team/mobile/t4mob@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpg"
+                />
+
+                <!-- Default picture -->
+                <img
+                  class="picture"
+                  src="./images/studio-team/mobile/1x/t4mob.jpg"
+                  alt="Михаил Ермаков"
+                  width="450"
+                  height="460"
+                  loading="lazy"
+                />
+              </picture>
               <div class="group">
                 <h3 class="title">Михаил Ермаков</h3>
                 <p class="text">UI Designer</p>
@@ -726,15 +926,14 @@
         <div class="subscribe">
           <h3 class="title">Подпишитесь на рассылку</h3>
           <form class="subscr-form">
-            
-              <input
-                class="form-input"
-                placeholder="E-mail"
-                type="email"
-                name="user-mail"
-                autocomplete="email"
-              />
-            
+            <input
+              class="form-input"
+              placeholder="E-mail"
+              type="email"
+              name="user-mail"
+              autocomplete="email"
+            />
+
             <button class="btn" type="submit">
               <span class="text">Подписаться</span>
               <svg width="24" height="24">
@@ -746,5 +945,6 @@
       </div>
     </footer>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

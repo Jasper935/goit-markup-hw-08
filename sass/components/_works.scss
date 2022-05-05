@@ -1,12 +1,23 @@
 .work {
   padding-bottom: 94px;
+  @include mq(mobile-only){
+    
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
 }
 .work .section-title {
   margin-bottom: 50px;
 }
-.work .list {
-  display: flex;
-}
+
 .work .list-item {
   width: 370px;
   position: relative;

@@ -1,5 +1,10 @@
 .join-us {
-    margin-left: 70px;
+    // margin-left: 70px;
+    margin-left: 0;
+    margin-bottom: 60px;
+    @include mq(mobile){
+     
+    }
   }
   .join-us .title,
   .subscribe .title {
