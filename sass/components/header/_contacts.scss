@@ -16,6 +16,9 @@
     padding: 2px;
     margin-right: 8px;
   }
+  .page-header .contacts__icon-tel{
+    padding-left: 0;
+  }
   .page-header .contacts__link {
     display: flex;
     align-items: center;
@@ -23,6 +26,7 @@
     font-weight: 500;
 font-size: 12px;
 line-height: 14px;
+
 /* identical to box height */
 
 letter-spacing: 0.02em;
@@ -56,6 +60,9 @@ color: #757575;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
+  @include mq(tablet){
+    // margin-left: auto;
+  }
 }
 .contacts__icon {
   fill: #afb1b8;
@@ -65,3 +72,6 @@ color: #757575;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+// .contacts__item{
+
+// }
